@@ -4,7 +4,7 @@ class UserController extends BaseController {
 
     public function login()
     {
-    	
+
     }
      public function logout()
     {
@@ -12,11 +12,16 @@ class UserController extends BaseController {
     }
      public function register()
     {
+    	$user = new UserModel();
     	if(isset($_POST['Submit'])) {
     		$Email = htmlentities(trim($_POST['Email']));
     		$Password = md5(trim($_POST['Password']));
-    		$user = new UserModel();
-    		$user->create($Email, $Password);
+    		if(!$user->exist($Email)) {
+    			$user->create($Email, $Password);
+    		}
+    		else{
+    			//TODO : ERROR
+    		}
     	}
     }
 }
