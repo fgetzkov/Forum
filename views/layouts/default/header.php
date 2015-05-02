@@ -50,8 +50,19 @@
                   </li>
                </ul>
                <ul class="nav navbar-nav navbar-right">
+               <?php
+               if(!isset($_SESSION['user'])):
+               ?>
                   <li><a href="user/login" >Login</a></li>
                   <li id="registrationForm"><a href="user/register">Registration</a></li>
+                  <?php
+                  else:
+                  ?>
+               <li style="margin-top:12px">Hi, <?php echo $_SESSION['user']['email']; ?>!</li>
+                  <li><a href="user/logout" >Logout</a></li>
+                  <?php
+                  endif;
+                  ?>
                </ul>
             </div>
          </div>

@@ -57,7 +57,7 @@ abstract class BaseController {
         if ($controller == null) {
             $controller = $this->controller;
         }
-        $url = "/$controller/$action";
+        $url = PROJECT_DIR . "/$controller/$action";
         $paramsUrlEncoded = array_map('urlencode', $params);
         $paramsJoined = implode('/', $paramsUrlEncoded);
         if ($paramsJoined != '') {
@@ -86,7 +86,7 @@ abstract class BaseController {
     }
 
     protected function isLoggedIn() {
-        return isset($_SESSION['username']);
+        return isset($_SESSION['user']);
     }
 
     protected function isAdmin() {
@@ -95,7 +95,7 @@ abstract class BaseController {
 
     protected function authorize() {
         if (! $this->isLoggedIn()) {
-            $this->redirect("users", "login");
+            $this->redirect("user", "login");
         }
     }
 

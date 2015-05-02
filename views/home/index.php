@@ -1,9 +1,9 @@
       <div class="container">
          ::before
          <div class="page-header" id="banner">
-            <h1>Quiestions</h1>
+            <h1>Questions</h1>
          </div>
-         <a href="#" class="btn btn-primary">Add Question</a>
+         <a href="question/add" class="btn btn-primary">Add Question</a>
          <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
                <input type="text" class="form-control" placeholder="Search">
