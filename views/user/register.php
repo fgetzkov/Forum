@@ -5,15 +5,21 @@
                 <fieldset>
                   <legend>Registration</legend>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-lg-2 control-label">UserName</label>
                     <div class="col-lg-10">
-                      <input name="Email" type="text" class="form-control" id="inputEmail" placeholder="Email" required>
+                      <input name="Email" type="text" class="form-control" id="inputEmail" placeholder="UserName" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
                       <input name="Password" type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Confirm Password</label>
+                    <div class="col-lg-10">
+                      <input name="Password" type="password" class="form-control" id="inputPassword" placeholder="Confirm Password" required>
                     </div>
                   </div>
                   <div class="form-group">

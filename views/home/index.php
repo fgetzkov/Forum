@@ -14,13 +14,13 @@
          <div class="ItemContent Discussion">
             <div class="Title">
             <span class="label label-success">new</span>
-               <a href="question/preview/<?= $post['id'] ?>"><?= htmlspecialchars($post['title']) ?></a>
+            <a href="question/preview/<?= $post['id'] ?>"><b><?= htmlspecialchars($post['title']) ?></b></a>
             </div>
             <div class="Meta Meta-Discussion">
-               <span class="MItem MCount ViewCount"><span title="# views" class="Number">#</span> <?= htmlspecialchars($post['visits']) ?></span>
-               <span class="MItem MCount CommentCount"><span title="# comments" class="Number">#</span> comments</span>
-               <span class="MItem MCount DiscussionScore Hidden"><span title="# points" class="Number">#</span> points</span>
-               <span class="MItem LastCommentBy">Most recent by <a href="#"><?= $post['author'] ?></a></span>  <span class="MItem LastCommentDate"><time title="#" datetime="#"><?= htmlspecialchars($post['date']) ?></time></span><span class="MItem Category Category-#"><a href="#Linkcategory"><?= htmlspecialchars($post['category']) ?></a></span>
+               <span class="MItem MCount ViewCount"><span title="# views" class="Number">views</span> <?= htmlspecialchars($post['visits']) ?></span>
+               <span class="MItem LastCommentBy">Posted By <a href="#"><?= htmlspecialchars($post['author']) ?></a></span>
+               <span class="MItem LastCommentDate"><time title="#" datetime="#"><?= htmlspecialchars($post['date']) ?></time></span>
+               <span class="MItem Category Category-#"> Category: <?= $this->categories htmlspecialchars([$post['category']]) ?></span>
             </div>
          </div>
          <br>

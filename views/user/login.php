@@ -5,9 +5,9 @@
                 <fieldset>
                   <legend>Login</legend>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-lg-2 control-label">UserName</label>
                     <div class="col-lg-10">
-                      <input type="text" name="Email" class="form-control" id="inputEmail" placeholder="Email" required>
+                      <input type="text" name="Email" class="form-control" id="inputEmail" placeholder="UserName" required>
                     </div>
                   </div>
                   <div class="form-group">
