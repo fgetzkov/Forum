@@ -30,8 +30,11 @@
     	if(isset($_POST['Submit'])) {
     		$Email = htmlentities(trim($_POST['Email']));
     		$Password = md5(trim($_POST['Password']));
-    		if(!$user->exist($Email)) {
+            $captcha = $_POST['g-recaptcha-response'];
+            $captcha_response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LetpgYTAAAAAErKZNX-_vAyQLtvZn0zk1YvIGTN&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
+            if(!$user->exist($Email) && $captcha_response['success']==true) {
     			$user->create($Email, $Password);
+                $this->redirect('User', 'login');
     		}
     		else{
     			//TODO : ERROR

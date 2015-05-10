@@ -29,6 +29,7 @@
                     </div>
                   </div>
                 </fieldset>
+                <div class="g-recaptcha" data-sitekey="6LetpgYTAAAAAKvp_sgCZhd4CpxHSQ_qIF1aKC6A"></div>
               </form>
             <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
           </div>

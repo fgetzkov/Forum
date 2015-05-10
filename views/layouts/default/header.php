@@ -5,6 +5,7 @@
       <base href="http://localhost/Forum/">
       <link rel="stylesheet" type="text/css" href="content/bootstrap.css">
       <script src="content/jquery-2.1.3.min.js"></script>
+      <script src='https://www.google.com/recaptcha/api.js'></script>
    </head>
    <body>
       <div class="navbar navbar-default navbar-fixed-top">

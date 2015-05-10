@@ -19,8 +19,8 @@
             <div class="Meta Meta-Discussion">
                <span class="MItem MCount ViewCount"><span title="# views" class="Number">views</span> <?= htmlspecialchars($post['visits']) ?></span>
                <span class="MItem LastCommentBy">Posted By <a href="#"><?= htmlspecialchars($post['author']) ?></a></span>
-               <span class="MItem LastCommentDate"><time title="#" datetime="#"><?= htmlspecialchars($post['date']) ?></time></span>
-               <span class="MItem Category Category-#"> Category: <?= $this->categories htmlspecialchars([$post['category']]) ?></span>
+               <span class="MItem LastCommentDate"><time title="#" datetime="#"><?= $post['date'] ?></time></span>
+               <span class="MItem Category Category-#"> Category: <?= $this->categories [$post['category']] ?></span>
             </div>
          </div>
          <br>
